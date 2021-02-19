@@ -5,6 +5,10 @@ using UnityEngine;
 public class CharacterMovementScript : MonoBehaviour
 {
     [SerializeField]
+    private GameObject smokeEffect;
+    [SerializeField]
+    private Transform smokePos;
+    [SerializeField]
     private float _moveSpeed = 5f;
     [SerializeField]
     private float _gravity = 9.81f;
@@ -53,7 +57,8 @@ public class CharacterMovementScript : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                //  anime.SetBool("Jump", true);
+
+                Smoke(smokePos.position);
                 _directionY = _jumpSpeed;
                 _directionY -= _gravity * Time.deltaTime;
             }
@@ -68,6 +73,7 @@ public class CharacterMovementScript : MonoBehaviour
             anime.SetBool("Jump", true);
             if (Input.GetButtonDown("Jump") && _canDoubleJump && !_wallJump)
             {
+                Smoke(smokePos.position);
                 _directionY = _jumpSpeed * _doubleJumpMultiplier;
                 _canDoubleJump = false;
             }
@@ -88,6 +94,7 @@ public class CharacterMovementScript : MonoBehaviour
             if (Input.GetButtonDown("Jump") && _wallJump)
             {
                 _wallJump = false;
+                Smoke(hit.point);
                 // anime.SetBool("Jump", true);
                 _directionY = _jumpSpeed;
                 Debug.LogError(hit.normal);
@@ -96,6 +103,11 @@ public class CharacterMovementScript : MonoBehaviour
 
             }
         }
+    }
+
+    void Smoke(Vector3 pos)
+    {
+        Instantiate(smokeEffect, pos, Quaternion.identity);
     }
 
 }
