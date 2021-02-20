@@ -1592,7 +1592,7 @@ MonoBehaviour:
   _moveSpeed: 5
   _gravity: 9.81
   _jumpSpeed: 3.5
-  _doubleJumpMultiplier: 0.5
+  _doubleJumpMultiplier: 1
   anime: {fileID: 1037812433}
 --- !u!95 &1037812433 stripped
 Animator:

@@ -69,7 +69,6 @@ public class CharacterMovementScript : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Player Falling");
             anime.SetBool("Jump", true);
             if (Input.GetButtonDown("Jump") && _canDoubleJump && !_wallJump)
             {
@@ -77,7 +76,10 @@ public class CharacterMovementScript : MonoBehaviour
                 _directionY = _jumpSpeed * _doubleJumpMultiplier;
                 _canDoubleJump = false;
             }
-            _directionY -= _gravity * Time.deltaTime;
+            if (!_wallJump)
+            {
+                _directionY -= _gravity * Time.deltaTime;
+            }
         }
 
 
@@ -94,14 +96,16 @@ public class CharacterMovementScript : MonoBehaviour
             if (Input.GetButtonDown("Jump") && _wallJump)
             {
                 _wallJump = false;
+                StopAllCoroutines();
                 Smoke(hit.point);
-                // anime.SetBool("Jump", true);
                 _directionY = _jumpSpeed;
-                Debug.LogError(hit.normal);
                 direction = hit.normal;
                 transform.right = Vector3.Slerp(transform.right, Vector3.right * direction.z, 10f);
 
             }
+        }
+        {
+            _wallJump = false;
         }
     }
 
