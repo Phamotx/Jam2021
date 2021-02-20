@@ -1,0 +1,20 @@
+GAME DESIGN ELEMENTS:
+
+* Enemies on being killed drop orbs/vaccine that act both as currency and support character health/number.
+* Player can either store it to level up character or use it to decrease their toxicity.
+* Enemies strength/number increases as the toxicity increases.
+* Toxicity effects wrt to percentage of health left.
+* Screen grows dark as the toxicity increases.
+* Add support character abilities
+	- Corrupted platforms don't disappear
+	- adds a different path
+	- increases immunity
+	- provides light
+* Combo system - consecutive vertical jumps
+* Increasing pitch - Sound effects for either corrupted platform or enemies rise in pitch (Add a rhythm element)
+* Endless mode
+* Make corrupted platforms in a pattern
+	- Only they shine while dark
+	
+
+

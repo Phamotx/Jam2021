@@ -1,0 +1,29 @@
+CHANGES/TO-DO:
+
+* Character Controller 	- Try to make the character stay a little longer on the walls.
+						- Add Movement in air.
+						- Try to fix the slippery movement of the character (slips on wall)
+						- Add double jump after wall jump
+
+
+* Level Design	- Make the corrupted platforms go through (maybe leaves kind of structure)
+				- Make the corrupted platforms detroy after 1 sec and regenerate after 5 sec
+				- Add enemies in the level design (maybe an another section)
+
+* Art 	- Wall BG
+		- 3D models for walls and obstacles
+		- 3D models for characters
+		- 3D models for viruses/enemies
+		- Toxicity shader/fog effect
+		- UI
+		- Particle effects
+
+
+* Programming	- Add corrupted platform functionality
+				- UI Manager
+				- Enemies Manager
+				- Support Character functionality
+				- Combo Manager
+				- Sound Manager
+
+
