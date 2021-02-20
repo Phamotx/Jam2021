@@ -23,7 +23,7 @@ public class PlatformSpawner : MonoBehaviour
     //[SerializeField] private float _minFallSpeed = 3f;
     //[SerializeField] private float _minFallSpeed = 3f;
     [SerializeField] private float _spawnTime = 2f;
-    [SerializeField] private float _fallSpeed = 5f;
+    [SerializeField] private float _fallSpeed = 0f;
     //[SerializeField] private float _minimumPlatformDistance = 3.5f;
     //[SerializeField] private float _maximumPlatformDistance = 4f;
 
