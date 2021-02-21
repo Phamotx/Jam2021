@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene");        
+        SceneManager.LoadScene("Level_1");        
     }
 
     public void ExitGame()

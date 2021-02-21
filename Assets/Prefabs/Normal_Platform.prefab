@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5958555157512057484}
   - component: {fileID: 578648936}
   m_Layer: 0
-  m_Name: Platform Prefab
+  m_Name: Normal_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b5cb5fc159527554ab0e3acb0283fb9a, type: 2}
+  - {fileID: 2100000, guid: abe10391710032e4c8355ee68123c4cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
